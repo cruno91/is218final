@@ -1,1 +1,2 @@
-test 2
+1. Unit testing is when small pieces of code are tested with computer modules together and tested with certain test procedures to see if they are ready for use.The goal of unit testing is to isolate each part of the program and show taht the individual parts are correct.  As a result it offers several benefits; find problems early, fasciliates change, simplifies integeration, documentation, and design.
+2. 
