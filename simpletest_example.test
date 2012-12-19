@@ -142,5 +142,22 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $result = simpletest_example_empty_mysql_date(date('Y-m-d'));
     $message = 'A valid date should return FALSE.';
     $this->assertFalse($result, $message);
+	
   }
+  
+  public function testUserNameLength(){
+	$name = '';
+	$result = user_validate_name($name);
+	$message = "no name";
+	$this->assertNotNull($result, $message);
+	
+	$name = 'joe';
+	$result = user_validate_name($name);
+	$message = "has a name";
+	$this->assertNotNull($result, $message);
+	
+  }
+  
+  
+  
 }
