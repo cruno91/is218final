@@ -142,6 +142,14 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $result = simpletest_example_empty_mysql_date(date('Y-m-d'));
     $message = 'A valid date should return FALSE.';
     $this->assertFalse($result, $message);
+
+    $result = simpletest_example_empty_mysql_date(date('year-month-day'));
+    $message = 'pass';
+    $this->assertFalse($result, $message);
+  
+    $result = simpletest_example_empty_mysql_date(date('year-month-day'));
+    $message = 'Fail';
+    $this->assertTrue($result, $message);
 	
   }
   
